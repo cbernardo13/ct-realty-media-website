@@ -31,6 +31,10 @@ const Contact = () => {
             <SEO
                 title="Contact"
                 description="Book your next real estate photoshoot in CT, RI, or MA. Contact CT Realty Media today."
+                breadcrumbs={[
+                    { name: "Home", url: "https://www.ctrealtymedia.com/" },
+                    { name: "Contact", url: "https://www.ctrealtymedia.com/contact" }
+                ]}
             />
             {/* Header */}
             <section className="bg-primary text-white py-20">

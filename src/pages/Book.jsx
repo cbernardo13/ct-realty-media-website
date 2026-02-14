@@ -100,11 +100,30 @@ const Book = () => {
         return () => window.removeEventListener('message', handleMessage);
     }, []);
 
+    // FAQ Schema for Google Rich Results (Yoast/RankMath feature)
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.q,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.a
+            }
+        }))
+    };
+
     return (
         <div className="bg-gray-50 pt-20">
             <SEO
                 title="Book Your Shoot — CT Realty Media"
                 description="Schedule professional real estate photography, drone aerial video, cinematic tours, and Zillow 3D Home shoots in Connecticut, Rhode Island, and Massachusetts. Fast online booking, 24-hour delivery."
+                additionalJsonLd={faqSchema}
+                breadcrumbs={[
+                    { name: "Home", url: "https://www.ctrealtymedia.com/" },
+                    { name: "Book", url: "https://www.ctrealtymedia.com/book" }
+                ]}
             />
 
             {/* Hero Banner */}

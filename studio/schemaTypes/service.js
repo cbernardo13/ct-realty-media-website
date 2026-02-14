@@ -42,6 +42,11 @@ export default {
             options: {
                 source: 'title'
             }
+        },
+        {
+            name: 'seo',
+            title: 'SEO & Social',
+            type: 'seoFields',
         }
     ],
     preview: {

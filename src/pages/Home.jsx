@@ -4,16 +4,14 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Camera, Video, Compass, Home as HomeIcon } from 'lucide-react';
 import Testimonials from '../components/Testimonials';
 import SEO from '../components/SEO';
-import { getHomepage, getSEO, getServices } from '../lib/sanity';
+import { getHomepage, getServices } from '../lib/sanity';
 
 const Home = () => {
     const [homeData, setHomeData] = useState(null);
-    const [seoData, setSeoData] = useState(null);
     const [services, setServices] = useState([]);
 
     useEffect(() => {
         getHomepage().then(data => setHomeData(data)).catch(console.error);
-        getSEO().then(data => setSeoData(data)).catch(console.error);
         getServices().then(data => setServices(data)).catch(console.error);
     }, []);
 
@@ -33,8 +31,11 @@ const Home = () => {
     return (
         <div className="bg-gray-50 min-h-screen">
             <SEO
-                title={seoData?.siteTitle || "Home"}
-                description={seoData?.metaDescription || "Premium real estate photography, drone video, and 3D tours in CT, MA, and RI. Elevate your listings with cinematic media."}
+                seo={homeData?.seo}
+                title="Home"
+                breadcrumbs={[
+                    { name: "Home", url: "https://www.ctrealtymedia.com/" }
+                ]}
             />
             {/* Hero Section */}
             <section className="relative h-screen flex items-center justify-center overflow-hidden">

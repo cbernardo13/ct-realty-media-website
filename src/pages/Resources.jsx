@@ -10,6 +10,10 @@ const Resources = () => {
             <SEO
                 title="Resources & Guides"
                 description="Helpful guides and checklists for preparing your home for a real estate photoshoot. Maximize your listing's potential."
+                breadcrumbs={[
+                    { name: "Home", url: "https://www.ctrealtymedia.com/" },
+                    { name: "Resources", url: "https://www.ctrealtymedia.com/resources" }
+                ]}
             />
 
             {/* Header */}

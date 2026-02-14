@@ -22,12 +22,30 @@ export async function getServices() {
     "image": coalesce(serviceImage.asset->url, image.asset->url),
     "alt": coalesce(serviceImage.alt, image.alt),
     features,
-    slug
+    slug,
+    seo
   }`);
 }
 
 export async function getSEO() {
-    return await client.fetch(`*[_id == "seo"][0]`);
+    return await client.fetch(`*[_id == "seo"][0]{
+        siteTitle,
+        titleSeparator,
+        metaDescription,
+        "ogImage": ogImage.asset->url,
+        keywords,
+        organizationName,
+        "logo": logo{ asset-> },
+        phone,
+        email,
+        address,
+        geo,
+        priceRange,
+        areasServed,
+        socialProfiles,
+        googleSiteVerification,
+        bingSiteVerification
+    }`);
 }
 
 export async function getHomepage() {
@@ -39,10 +57,15 @@ export async function getHomepage() {
         ctaTitle,
         ctaText,
         "servicesHeaderImage": servicesHeaderImage.asset->url,
-        "servicesHeaderImageAlt": servicesHeaderImage.alt
+        "servicesHeaderImageAlt": servicesHeaderImage.alt,
+        seo
     }`);
 }
 
 export async function getTestimonials() {
     return await client.fetch(`* [_type == "testimonial"] | order(_createdAt desc)`);
+}
+
+export async function getPageSEO(slug) {
+    return await client.fetch(`*[_type == "sitePage" && slug.current == $slug][0].seo`, { slug });
 }

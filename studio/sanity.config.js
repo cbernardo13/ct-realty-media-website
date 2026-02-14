@@ -35,6 +35,7 @@ export default defineConfig({
                                     .documentId('seo')
                             ),
                         // Regular document types
+                        S.documentTypeListItem('sitePage').title('Site Pages'),
                         S.documentTypeListItem('service').title('Services'),
                         S.documentTypeListItem('testimonial').title('Testimonials'),
                     ]),

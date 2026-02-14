@@ -117,7 +117,7 @@ const Services = () => {
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Real Estate Media Packages",
-            " itemListElement": service.features?.map(feature => ({
+            "itemListElement": service.features?.map(feature => ({
                 "@type": "Offer",
                 "itemOffered": {
                     "@type": "Service",
@@ -132,7 +132,12 @@ const Services = () => {
             <SEO
                 title="Services"
                 description="Explore our premium real estate media services: HDR photography, drone aerials, cinematic video tours, and 3D Matterport walkthroughs."
+                seo={homeData?.seo}
                 additionalJsonLd={serviceSchema}
+                breadcrumbs={[
+                    { name: "Home", url: "https://www.ctrealtymedia.com/" },
+                    { name: "Services", url: "https://www.ctrealtymedia.com/services" }
+                ]}
             />
             {/* Header */}
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-primary">
