@@ -8,16 +8,16 @@ export default {
             name: 'metaTitle',
             title: 'Meta Title',
             type: 'string',
-            description: 'Title shown in search engine results and browser tabs. Aim for 50-60 characters.',
-            validation: Rule => Rule.max(60).warning('⚠️ Longer titles may be truncated by Google (max ~60 chars)')
+            description: 'Title shown in search engine results and browser tabs. Aim for 50-55 characters.',
+            validation: Rule => Rule.max(55).warning('⚠️ Longer titles may be truncated by Google (max ~55 chars)')
         },
         {
             name: 'metaDescription',
             title: 'Meta Description',
             type: 'text',
             rows: 3,
-            description: 'Description shown below the title in search results. Aim for 120-160 characters.',
-            validation: Rule => Rule.max(160).warning('⚠️ Longer descriptions may be truncated (max ~160 chars)')
+            description: 'Description shown below the title in search results. Aim for 120-150 characters.',
+            validation: Rule => Rule.max(150).warning('⚠️ Longer descriptions may be truncated (max ~150 chars)')
         },
         {
             name: 'focusKeyword',

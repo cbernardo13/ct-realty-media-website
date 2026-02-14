@@ -40,7 +40,7 @@ const SEO = ({ title, description, seo, canonical, additionalJsonLd, breadcrumbs
     // ─── BRAND & TITLES ────────────────────────────────
     const brandName = seoData?.organizationName || "CT Realty Media";
     const separator = seoData?.titleSeparator || "|";
-    const globalTitle = seoData?.siteTitle || `${brandName} ${separator} Premium Real Estate Photography`;
+    const globalTitle = seoData?.siteTitle || `${brandName} ${separator} Real Estate Photography in CT, RI & MA`;
 
     let fullTitle = globalTitle;
     if (activeSeo?.metaTitle) {
@@ -50,7 +50,7 @@ const SEO = ({ title, description, seo, canonical, additionalJsonLd, breadcrumbs
     }
 
     // ─── DESCRIPTIONS ──────────────────────────────────
-    const metaDescription = activeSeo?.metaDescription || description || seoData?.metaDescription || "Professional real estate photography, cinematic video tours, and drone services in Connecticut, Massachusetts, and Rhode Island.";
+    const metaDescription = activeSeo?.metaDescription || description || seoData?.metaDescription || "Professional real estate photography, drone aerials, and 3D tours in CT, RI, and MA. Fast 24-hour delivery on all media packages.";
 
     // ─── IMAGES ────────────────────────────────────────
     const ogImage = activeSeo?.shareImage?.asset?.url || seoData?.ogImage || "https://www.ctrealtymedia.com/wp-content/uploads/2024/05/ctrealtymedia_newlogo.png";

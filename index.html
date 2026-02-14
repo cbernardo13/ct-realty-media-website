@@ -4,28 +4,29 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Default SEO (overridden by React Helmet on each page) -->
-  <title>CT Realty Media | Premium Real Estate Photography in CT, RI & MA</title>
+  <title>CT Realty Media | Real Estate Photography in CT, RI & MA</title>
   <meta name="description"
-    content="Professional real estate photography, cinematic video tours, drone aerials, and 3D Matterport walkthroughs serving Connecticut, Rhode Island, and Massachusetts. Book online — 24-hour delivery." />
+    content="Professional real estate photography, drone aerials, and 3D tours in CT, RI, and MA. Fast 24-hour delivery on all media packages." />
 
   <!-- Open Graph Defaults -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="CT Realty Media" />
-  <meta property="og:title" content="CT Realty Media | Premium Real Estate Photography" />
+  <meta property="og:title" content="CT Realty Media | Real Estate Photography" />
   <meta property="og:description"
-    content="Professional real estate photography, cinematic video tours, drone aerials, and 3D Matterport walkthroughs serving CT, RI & MA." />
+    content="Professional real estate photography, drone aerials, and 3D tours in CT, RI, and MA." />
   <meta property="og:image" content="https://www.ctrealtymedia.com/favicon.png" />
   <meta property="og:url" content="https://www.ctrealtymedia.com" />
   <meta property="og:locale" content="en_US" />
 
   <!-- Twitter Card Defaults -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="CT Realty Media | Premium Real Estate Photography" />
+  <meta name="twitter:title" content="CT Realty Media | Real Estate Photography" />
   <meta name="twitter:description"
-    content="Professional real estate photography, video tours, drone aerials & 3D tours in CT, RI & MA." />
+    content="Professional real estate photography, drone aerials & 3D tours in CT, RI & MA." />
   <meta name="twitter:image" content="https://www.ctrealtymedia.com/favicon.png" />
 
   <!-- Geo Meta (Local SEO) -->
@@ -37,7 +38,30 @@
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <!-- Static Fallback Content (Visible to SEO/AEO bots, hidden from users via CSS clip) -->
+    <div
+      style="position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0;">
+      <header>
+        <h1>CT Realty Media - Premium Real Estate Photography & Media</h1>
+        <nav>
+          <a href="/services">Services</a>
+          <a href="/gallery">Gallery</a>
+          <a href="/book">Book Now</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </header>
+      <main>
+        <section>
+          <h2>Professional Real Estate Media in Connecticut, Rhode Island & Massachusetts</h2>
+          <p>Specializing in HDR photography, cinematic video tours, aerial drone media, and Matterport 3D walkthroughs.
+            We help agents sell properties faster with high-quality visual marketing.</p>
+          <p>Our coverage includes Hartford, New Haven, Providence, and Springfield areas with a guaranteed 24-hour
+            delivery.</p>
+        </section>
+      </main>
+    </div>
+  </div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 

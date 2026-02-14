@@ -71,7 +71,7 @@ const Home = () => {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="text-5xl md:text-7xl font-serif font-bold mb-6 tracking-tight leading-tight drop-shadow-lg text-white"
                     >
-                        {typeof heroHeading === 'string' ? heroHeading : heroHeading}
+                        {heroHeading}
                     </motion.h1>
 
                     <motion.p
