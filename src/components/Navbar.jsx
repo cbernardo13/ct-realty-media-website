@@ -37,7 +37,7 @@ const Navbar = () => {
                 {/* Logo */}
                 <Link to="/" className="flex items-center">
                     <img
-                        src="https://www.ctrealtymedia.com/wp-content/uploads/2024/05/ctrealtymedia_newlogo.png"
+                        src="/logo.png"
                         alt="CT Realty Media"
                         className="h-12 w-auto object-contain"
                     />
