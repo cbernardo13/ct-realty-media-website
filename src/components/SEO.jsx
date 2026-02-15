@@ -85,7 +85,7 @@ const SEO = ({ title, description, seo, canonical, additionalJsonLd, breadcrumbs
             "@type": "ContactPoint",
             "telephone": seoData?.phone || "+18603226961",
             "contactType": "customer service",
-            "email": seoData?.email || "info@ctrealtymedia.com",
+            "email": seoData?.email || "chris@ctrealtymedia.com",
             "areaServed": seoData?.areasServed || ["Connecticut", "Rhode Island", "Massachusetts"],
             "availableLanguage": "English"
         },
@@ -101,7 +101,7 @@ const SEO = ({ title, description, seo, canonical, additionalJsonLd, breadcrumbs
         "image": ogImage,
         "url": "https://www.ctrealtymedia.com",
         "telephone": seoData?.phone || "+18603226961",
-        "email": seoData?.email || "info@ctrealtymedia.com",
+        "email": seoData?.email || "chris@ctrealtymedia.com",
         "address": {
             "@type": "PostalAddress",
             ...(seoData?.address?.street && { "streetAddress": seoData.address.street }),
