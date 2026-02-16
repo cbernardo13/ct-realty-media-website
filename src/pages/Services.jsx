@@ -177,8 +177,8 @@ const Services = () => {
                     transition={{ duration: 2, repeat: Infinity }}
                 >
                     <div className="flex flex-col items-center gap-2">
-                        <span className="text-xs uppercase tracking-widest text-white/50">Scroll</span>
-                        <div className="w-0.5 h-12 bg-gradient-to-b from-secondary to-transparent"></div>
+                        <span className="text-xs uppercase tracking-widest text-white/80">Scroll</span>
+                        <div className="w-1 h-12 bg-gradient-to-b from-secondary via-secondary/60 to-transparent rounded-full"></div>
                     </div>
                 </motion.div>
             </section>

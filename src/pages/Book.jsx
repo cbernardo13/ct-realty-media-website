@@ -135,7 +135,7 @@ const Book = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-5xl md:text-6xl font-serif font-bold mb-6"
+                        className="text-5xl md:text-6xl font-serif font-bold mb-6 text-white"
                     >
                         Book Your <span className="text-secondary">Shoot</span>
                     </motion.h1>
@@ -329,7 +329,7 @@ const Book = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">Ready to Elevate Your Listings?</h2>
+                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-white">Ready to Elevate Your Listings?</h2>
                         <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-10">
                             Join hundreds of agents across Connecticut, Rhode Island, and Massachusetts who trust CT Realty Media with their property marketing.
                         </p>
